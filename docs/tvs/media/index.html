@@ -12,9 +12,9 @@
     <meta charset="utf-8">
     <meta name="robots" content="none">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PTH Conference info">
+    <meta name="description" content="PTH Conference media TV content">
 
-    <title>PTH Conference info</title>
+    <title>PTH Conference Media TV</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -22,16 +22,28 @@
   </head>
 
   <body>
-    <main></main>
+    <iframe title="PTH Conference media content" allowfullscreen></iframe>
     <footer>
       <i class="fas fa-wifi"></i> PTH!2026
     </footer>
 
-    <script src='../../scripts/timed-slider.js'></script>
+    <script src='../../scripts/framed-slider.js'></script>
     <script>
-      ConfTimedSlider([
-        { time: '00:00', image: 'archive-hall-01.png' }
-      ], 60000); // 1 minute timeout
+      ConfFramedSlider([
+        {
+          source: 'jobs-arquivo.html',
+          timeout: 15 * 1000
+        }, {
+          source: 'last-10-years.html',
+          timeout: 119 * 1000
+        }, {
+          source: 'survey-arquivo.html',
+          timeout: 15 * 1000
+        }, {
+          source: 'welcome-venue.html',
+          timeout: 15 * 1000
+        }
+      ]);
     </script>
   </body>
 </html>
